@@ -10,7 +10,6 @@ name := (core.projectRefs.head / name).value
 
 val V = new {
   val betterMonadicFor = "0.3.1"
-  val cats = "2.10.0"
   val http4s = "0.23.24"
   val logbackClassic = "1.4.14"
   val munit = "0.7.29"
@@ -92,7 +91,6 @@ lazy val core = projectMatrix.in(file("core"))
 
     libraryDependencies ++= Seq(
       "org.http4s" %%% "http4s-dsl" % V.http4s,
-      //"org.typelevel" %% "cats-core" % V.cats,
       "org.typelevel" %%% "otel4s-core-metrics" % V.otel4s,
     ),
   )
