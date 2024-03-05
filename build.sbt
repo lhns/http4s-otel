@@ -1,6 +1,6 @@
 import org.scalajs.linker.interface.OutputPatterns
 
-lazy val scalaVersions = Seq("3.3.3", "2.13.12")
+lazy val scalaVersions = Seq("3.3.3", "2.13.13")
 
 ThisBuild / scalaVersion := scalaVersions.head
 ThisBuild / versionScheme := Some("early-semver")
@@ -11,7 +11,7 @@ name := (core.projectRefs.head / name).value
 val V = new {
   val betterMonadicFor = "0.3.1"
   val http4s = "0.23.25"
-  val logbackClassic = "1.4.14"
+  val logbackClassic = "1.5.3"
   val munit = "0.7.29"
   val munitTaglessFinal = "0.2.1"
   val otel4s = "0.4.0"
