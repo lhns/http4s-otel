@@ -12,7 +12,7 @@
 ### build.sbt
 
 ```sbt
-libraryDependencies += "de.lhns" %% "http4s-otel" % "0.1.0"
+libraryDependencies += "de.lhns" %% "http4s-otel" % "0.1.1"
 ```
 
 ## License
