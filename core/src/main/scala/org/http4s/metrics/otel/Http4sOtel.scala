@@ -179,30 +179,26 @@ object Http4sOtel {
                                                             responseDurationSecondsHistogramBuckets: BucketBoundaries
                                                           ): F[MetricsCollection[F]] = {
     val responseDuration: F[Histogram[F, Double]] = {
-      Meter[F]
-        .histogram[Double](prefix + ".response.duration")
+      Meter[F].histogram[Double][Double](prefix + ".response.duration")
         .withUnit("seconds")
         .withDescription("Response Duration in seconds.")
         .create
     }
 
     val activeRequests: F[UpDownCounter[F, Long]] = {
-      Meter[F]
-        .upDownCounter[Long](prefix + ".active_request.count")
+      Meter[F].upDownCounter[Long][Long](prefix + ".active_request.count")
         .withDescription("Total Active Requests.")
         .create
     }
 
     val requests: F[Counter[F, Long]] = {
-      Meter[F]
-        .counter[Long](prefix + ".request.count")
+      Meter[F].counter[Long][Long](prefix + ".request.count")
         .withDescription("Total Requests.")
         .create
     }
 
     val abnormalTerminations: F[Histogram[F, Double]] = {
-      Meter[F]
-        .histogram[Double](prefix + ".abnormal_terminations")
+      Meter[F].histogram[Double][Double](prefix + ".abnormal_terminations")
         .withDescription("Total Abnormal Terminations.")
         .withExplicitBucketBoundaries(responseDurationSecondsHistogramBuckets)
         .create
