@@ -1,6 +1,6 @@
 import org.scalajs.linker.interface.OutputPatterns
 
-lazy val scalaVersions = Seq("3.3.3", "2.13.13")
+lazy val scalaVersions = Seq("3.3.3", "2.13.14")
 
 ThisBuild / scalaVersion := scalaVersions.head
 ThisBuild / versionScheme := Some("early-semver")
