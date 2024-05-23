@@ -12,7 +12,7 @@ val V = new {
   val betterMonadicFor = "0.3.1"
   val http4s = "0.23.25"
   val logbackClassic = "1.5.3"
-  val munit = "0.7.29"
+  val munit = "1.0.0"
   val munitTaglessFinal = "0.2.1"
   val otel4s = "0.5.0-RC1"
 }
